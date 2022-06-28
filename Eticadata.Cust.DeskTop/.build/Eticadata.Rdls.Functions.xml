@@ -1,0 +1,192 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Eticadata.Rdls.Functions
+</name>
+</assembly>
+<members>
+<member name="T:Eticadata.Rdls.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Eticadata.Rdls.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Eticadata.Rdls.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:Eticadata.Rdls.ConvertToText">
+ <summary>
+ This class is used to:
+      1. Convert a numerical value in text. Ex.: 1.250,75   -> One thousand two hundred fifty euros and seventy five cents
+      2. Convert a date value in text.      Ex.: 29/01/2015 -> 29 January 2015
+ 
+ ATENTION: this class is added to the class "ZExtra.00.Support\CRUFLFunctions\Extenso.vb" as a link;
+ If this class is changed, we must register again the DLL:
+ Developer Command Pompt for VS: regasm CRUFLFunctions.dll
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Eticadata.Rdls.ConvertToText.ConvertNumber">
+ <summary>
+ NP - 29/01/2014
+ This class receives a numerical value, a coin and a style of language and returns in text the value received together with the currency in the desired language.
+ Exemple: For the received values: (Numeric Value: 1.250,75) - (Coin: Euros) - (Language: EN - English)
+          Returns: One thousand two hundred fifty euros and seventy five cents
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertNumber.GetTextNumber(System.String,System.String,System.Int32,System.Double)">
+ <summary>
+ Function that write in text a Double value
+ </summary>
+ <param name="pCoinAbbreviation">Abbreviation of the currency to which we want the extensive</param>
+ <param name="pCoinDescription">Description (name) of the coin</param>
+ <param name="pNumberDecimalPlaces">Number of decimal places to round the value</param>
+ <param name="pValueToWrite">Original value that we want to write in text</param>
+ <returns>returns a string with a numeric value written in text. 
+ Example: for a value 37,50 with the coin "Euros" returns: "Thirty seven euros and fifty cents"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertNumber.GetTextNumber(System.String,System.String,System.Int32,System.Double,Eticadata.Rdls.ConvertToText.LanguageStyle)">
+ <summary>
+ Function that write in text a Double value
+ </summary>
+ <param name="pCoinAbbreviation">Abbreviation of the currency to which we want the extensive</param>
+ <param name="pCoinDescription">Description (name) of the coin</param>
+ <param name="pNumberDecimalPlaces">Number of decimal places to round the value</param>
+ <param name="pValueToWrite">Original value to write in text</param>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <returns>returns a string with a numeric value written in text. 
+ Example: for a value 37,50 with the coin "Euros" returns: "Thirty seven euros and fifty cents"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertNumber.Initialize(Eticadata.Rdls.ConvertToText.LanguageStyle)">
+ <summary>
+ Initialize the values used to write in text the numerical value;
+ Possible values: Portuguese (default value), English, Spanish and French;
+ </summary>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertNumber.NumberToText(System.Double)">
+ <summary>
+ Recursive function that write in text a numeric value
+ </summary>
+ <param name="pValue">Value to write in text</param>
+ <returns>returns a string with a numeric value written in text. 
+ Example: for a value 37 returns: "thirty seven"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertNumber.SetSeparator(System.Double,System.Int32,System.Boolean)">
+ <summary>
+ Set the defined separator (TextNumberSeparator) between numbers text.
+ This function is used just because de PORTUGUESE LANGUAGE.
+ In the other cases, it isn't necessary to put a separator between the numbers.
+ </summary>
+ <param name="pValue">Value to check...</param>
+ <param name="pMod">Number to divide the value to get the remainder</param>
+ <param name="pForceSeparator">Force the separator between hundreds and tens</param>
+ <returns>Returns the defined separator (TextNumberSeparator) to put between numbers text</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertNumber.GetCoinDescription(System.String,System.Double)">
+ <summary>
+ Get the description of the coin. 
+ if the value of parameter 'pValue' is greater than '1' returns the plural of the coin, otherwise it returns the value passed in the parameter 'pCoin'
+ In this moment just do the plural for the coin "Euro";
+ </summary>
+ <param name="pCoin">Coin...</param>
+ <param name="pValue">Value...</param>
+ <returns>Returns string the with description of the coin</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Eticadata.Rdls.ConvertToText.ConvertDate">
+ <summary>
+ NP - 29/01/2014
+ This class receives a date and a style of language and returns in text the value received in the desired language.
+ Exemple: For the received values: (Date: 29/01/2015) - (Language: EN - English)
+          Returns: 29 January 2015
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertDate.GetTextDate(System.DateTime)">
+ <summary>
+ Function that write in text a date
+ </summary>
+ <param name="pDate">Original date to write in text</param>
+ <returns>returns a string with a date written in text. 
+ Example: for a date 01/01/2015 returns: "01 January 2015"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertDate.GetTextDate(System.DateTime,Eticadata.Rdls.ConvertToText.LanguageStyle)">
+ <summary>
+ Function that write in text a date
+ </summary>
+ <param name="pDate">Original date to write in text</param>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <returns>returns a string with a date written in text. 
+ Example: for a date 01/01/2015 returns: "01 January 2015"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertDate.GetTextMonth(System.Int32,Eticadata.Rdls.ConvertToText.LanguageStyle)">
+ <summary>
+ Function that write in text a month
+ </summary>
+ <param name="pMonth">Original month to write in text</param>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <returns>returns a string with a month written in text. 
+ Example: for a month '1' returns: "January"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.ConvertToText.ConvertDate.Initialize(Eticadata.Rdls.ConvertToText.LanguageStyle)">
+ <summary>
+ Initialize the values used to write in text the date value;
+ Possible values: Portuguese (default value), English, Spanish and French;
+ </summary>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.Extenso.GetTextNumber(System.String,System.String,System.Int32,System.Double,System.String)">
+ <summary>
+ Function that write in text a Double value
+ </summary>
+ <param name="pCoinAbbreviation">Abbreviation of the currency to which we want the extensive</param>
+ <param name="pCoinDescription">Description (name) of the coin</param>
+ <param name="pNumberDecimalPlaces">Number of decimal places to round the value</param>
+ <param name="pValueToWrite">Original value to write in text</param>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <returns>returns a string with a numeric value written in text. 
+ Example: for a value 37,50 with the coin "Euros" returns: "Thirty seven euros and fifty cents"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.Extenso.GetTextDate(System.DateTime,System.String)">
+ <summary>
+ Function that write in text a date
+ </summary>
+ <param name="pDate">Original date to write in text</param>
+ <param name="pCodLanguageStyle">Language style code</param>
+ <returns>returns a string with a date written in text. 
+ Example: for a date 01/01/2015 returns: "01 January 2015"</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Rdls.Percentagens.GetInfImpostos(System.String,System.Int32)">
+ <summary>
+ Recebe uma linha de uma query e o numero da coluna e
+ retorna o valor da coluna
+ </summary>
+ <param name="param">linha ==> vCol1;vCol2;vColn</param>
+ <param name="coluna">numero da coluna</param>
+ <returns>o resultado da coluna</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

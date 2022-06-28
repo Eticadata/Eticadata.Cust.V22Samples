@@ -1,0 +1,34 @@
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.Executable\.build\Eticadata.Cust.Executable.exe.config
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.Executable\.build\Eticadata.Cust.Executable.exe
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.Executable\.build\Eticadata.Cust.Executable.pdb
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.exe
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.pdb
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.DeskTop\.build\Eticadata.Cust.Executable.exe.config
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.DeskTop\.build\Eticadata.Cust.Executable.exe
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.DeskTop\.build\Eticadata.Cust.Executable.pdb
+D:\Edata.Cust\Projects\V17\ERP.Build\Desk.00.Bin\Bin\Eticadata.Cust.Executable.exe.config
+D:\Edata.Cust\Projects\V17\ERP.Build\Desk.00.Bin\Bin\Eticadata.Cust.Executable.exe
+D:\Edata.Cust\Projects\V17\ERP.Build\Desk.00.Bin\Bin\Eticadata.Cust.Executable.pdb
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.csprojResolveAssemblyReference.cache
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.exe
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.pdb
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\.build\Eticadata.Cust.Executable.exe.config
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\.build\Eticadata.Cust.Executable.exe
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\.build\Eticadata.Cust.Executable.pdb
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.csprojAssemblyReference.cache
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.exe.config
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.exe
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.pdb
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.csproj.AssemblyReference.cache
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.csproj.SuggestedBindingRedirects.cache
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.csproj.CoreCompileInputs.cache
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.exe
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.pdb
+D:\Edata.Cust\Projects\V22\ERP.Build\Desk.00.Bin\Bin\Eticadata.Cust.Executable.exe.config
+D:\Edata.Cust\Projects\V22\ERP.Build\Desk.00.Bin\Bin\Eticadata.Cust.Executable.exe
+D:\Edata.Cust\Projects\V22\ERP.Build\Desk.00.Bin\Bin\Eticadata.Cust.Executable.pdb
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.exe.config
+D:\Edata.Samples\Eticadata Customization V22 Samples\Eticadata.Cust.Executable\obj\Debug\Eticadata.Cust.Executable.csproj.CopyComplete
+C:\Program Files (x86)\eticadata software\ERP v22\Desktop\Bin\Eticadata.Cust.Executable.exe.config
+C:\Program Files (x86)\eticadata software\ERP v22\Desktop\Bin\Eticadata.Cust.Executable.exe
+C:\Program Files (x86)\eticadata software\ERP v22\Desktop\Bin\Eticadata.Cust.Executable.pdb

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Eticadata.Views.Movs.Gce
+</name>
+</assembly>
+<members>
+<member name="T:Eticadata.Views.Movs.Gce.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Eticadata.Views.Movs.Gce.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Eticadata.Views.Movs.Gce.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPEncargos.InitializeCondPagamento">
+ <summary>
+ Inicializar combo "Condições de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.ActualizaTabDocumento">
+ <summary>
+ Update the information on the "Document" tab [Tabulador Documento]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.GetLastDocumentFromEntityByThread">
+ <summary>
+ Thread to get the document number and date/hour of the last purchase document of an entity
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.GetAccountBalanceByThread">
+ <summary>
+ Thread to calculate the current account balance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.GetBalanceDueByThread">
+ <summary>
+ Thread to calculate the balance due 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.btnFornSaldoContaCorrente_Click(System.Object,System.EventArgs)">
+ <summary>
+ Aceder às Consultas Diversas, posicionando-se na consulta "Fornecedores / Conta Corrente", do fornecedor selecionado no documento
+ </summary>
+ <param name="eventSender"></param>
+ <param name="eventArgs"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.btnFornUltDocCompra_Click(System.Object,System.EventArgs)">
+ <summary>
+ Posicionar-se no ultimo doc. de compra para o fornecedor em questão
+ </summary>
+ <param name="eventSender"></param>
+ <param name="eventArgs"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.ActualizaTabArtigo">
+ <summary>
+ Update the information on the "Item" tab [Tabulador Artigos]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.UpdateInfoStockOfItemsByThread">
+ <summary>
+ Thread to calculate the stock of the selected item in the grid 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.GetLastPurchasingPriceFromEntityByThread">
+ <summary>
+ Calculate the last purchasing price of the item
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmCMPIntrod.InitializeCondPagamento">
+ <summary>
+ Inicializar combo "Condições de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmGENIntegrConvDup.SetDocConfirmStatus">
+ <summary>
+ updates the status of the confirmation blink of the document being edited
+ </summary>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmENCIntrod.UpdateInfoStockOfItemsByThread">
+ <summary>
+ Thread to calculate the stock of the selected item in the grid 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmENCIntrod.InitializeCondPagamento">
+ <summary>
+ Inicializar combo "Condições de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmENCIntrod.InitializeArmazemOrigem">
+ <summary>
+ Inicializar combo "Armázem Origem": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmTESComissoesLiquidacao.InitializeTipoPagamento">
+ <summary>
+ Inicializar combo "Tipo de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmTesMovimentosLetras.InitializeCondPagamentoEncargos">
+ <summary>
+ Inicializar combo "Encargos - Condições de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmTesMovimentosLetras.InitializeCondPagamentoAmort">
+ <summary>
+ Inicializar combo "Amortização - Condições de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.ActualizaTabDocumento">
+ <summary>
+ Update the information on the "Document" tab [Tabulador Documento]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.GetLastDocumentFromEntityByThread">
+ <summary>
+ Thread to get the document number and date/hour of the last sales document of an entity
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.GetAccountBalanceByThread">
+ <summary>
+ Thread to calculate the current account balance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.GetBalanceDueByThread">
+ <summary>
+ Thread to calculate the balance due 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.btnCliSaldoContaCorrente_Click(System.Object,System.EventArgs)">
+ <summary>
+ Aceder às Consultas Diversas, posicionando-se na consulta "Clientes / Conta Corrente", do cliente selecionado no documento
+ </summary>
+ <param name="eventSender"></param>
+ <param name="eventArgs"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.btnCliUltDocVenda_Click(System.Object,System.EventArgs)">
+ <summary>
+ Posicionar-se no ultimo doc. de vendas para o cliente em questão
+ </summary>
+ <param name="eventSender"></param>
+ <param name="eventArgs"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.ActualizaTabArtigo">
+ <summary>
+ Update the information on the "Item" tab [Tabulador Artigos]
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.UpdateInfoStockOfItemsByThread">
+ <summary>
+ Thread to calculate the stock of the selected item in the grid 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.GetLastSalesPriceFromEntityByThread">
+ <summary>
+ Calculate the last sale price of the item
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.InitializeCondPagamento">
+ <summary>
+ Inicializar combo "Condições de Pagamento": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Eticadata.Views.Movs.Gce.frmVNDIntrod.InitializeArmazemOrigem">
+ <summary>
+ Inicializar combo "Armázem Origem": ativar filtro (blnFiltro1) para não listar registos "Inativos"
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

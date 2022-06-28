@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>
+Eticadata.IntegratorOffLine
+</name>
+  </assembly>
+  <members>
+    <member name="M:Eticadata.IntegratorOffLine.Exportador.ExportaXML(Eticadata.IntegratorOffLine.PerfilIntegracao)">
+      <summary>
+ Função inicial da exportação. Calcula dados e gera ficheiro final.
+ </summary>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.IntegradorBase.CarregaDados(Eticadata.ERP.IntgOffLine.IntgConfiguracoes)">
+      <summary>
+ Função responsável por carregar as definições do perfil de integração
+ </summary>
+      <remarks>Esta função é utilizada tanto na importação como na exportação</remarks>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.IntegradorBase.VerificaRemoveFicheiro(System.String,System.String)">
+      <summary>
+ Método que verifica se um determinado ficheiro existe, caso exista remove o!
+ Função utilizada na transferencia de ficheiros entre Directoria, FTP e EMAIL!
+ </summary>
+      <param name="pPastaOrigem">
+      </param>
+      <param name="pFicheiro">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.IntegradorBase.GetTabelaCampo(System.String)">
+      <summary>
+ Devolve a tabela ou Alias de um determinado campo
+ </summary>
+      <remarks>O strCampo deve ter o seguinte formato "Tabela.Campo"</remarks>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.Transferencia.TransfereFicheiro">
+      <summary>
+ Função responsavel pela Transferencia de Ficheiros entre Origem e Destino
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.Transferencia.IniciaTransferencia(Eticadata.IntegratorOffLine.PerfilTransferencia)">
+      <summary>
+ Função responsavel pela Transferencia de Ficheiros entre Origem e Destino
+ </summary>
+      <param name="pObjSingular">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.Transferencia.VerificacaoResposta">
+      <summary>
+ Função responsavel pelo envio da resposta da Importação
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.IntegratorOffLine.Transferencia.EnvioResposta">
+      <summary>
+ Função responsavel pelo envio da Resposta da Importação
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+  </members>
+</doc>

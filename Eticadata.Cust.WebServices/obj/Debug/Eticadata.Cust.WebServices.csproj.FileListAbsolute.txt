@@ -1,0 +1,32 @@
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll.config
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.pdb
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.csprojResolveAssemblyReference.cache
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.dll
+D:\eticadata-cust.visualstudio.com\Eticadata Customization Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.pdb
+C:\Users\bacelar\Source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.csproj.CoreCompileInputs.cache
+C:\Users\bacelar\Source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.dll
+C:\Users\bacelar\Source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.pdb
+C:\Users\bacelar\Source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll.config
+C:\Users\bacelar\Source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll
+C:\Users\bacelar\Source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.pdb
+C:\Users\bacelar\source\Workspaces\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.csprojAssemblyReference.cache
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll.config
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.pdb
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\EntityFramework.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.DomainServices.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.RiaServices.Attachments.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\Eticadata.RiaServices.Startup.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\OpenRiaServices.DomainServices.EntityFramework.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\OpenRiaServices.DomainServices.Hosting.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\OpenRiaServices.DomainServices.Hosting.Endpoint.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\.build\OpenRiaServices.DomainServices.Server.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.dll
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.pdb
+D:\Samples\Eticadata Customization V18 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.csprojResolveAssemblyReference.cache
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.dll
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.WebServices\obj\Debug\Eticadata.Cust.WebServices.pdb
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll.config
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.dll
+D:\Edata.Samples\Eticadata Customization V19 Samples\Eticadata.Cust.WebServices\.build\Eticadata.Cust.WebServices.pdb

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>D:\Edata.Cust\Projects\V18\ERP.Build\Desk.00.Bin\ERPv18.e.exe</StartProgram>
+    <StartArguments>-s "D:\Edata.Cust\Projects\V18\ERP.Build\Inics"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\eticadata Sites\ERP v22\Eticadata.Web\Bin\;C:\Program Files (x86)\eticadata software\ERP v22\Desktop\Bin\</ReferencePath>
+  </PropertyGroup>
+</Project>

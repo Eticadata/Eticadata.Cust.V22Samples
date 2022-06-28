@@ -1,0 +1,15 @@
+\.vs
+\packages
+.vssscc
+.user
+.vspscc
+\BuildProcessTemplates
+\Debug
+\Release
+\obj
+\.build
+\.publish
+\build
+\bin
+publishGit.ps1
+exclusionList.txt

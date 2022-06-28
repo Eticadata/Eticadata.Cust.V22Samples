@@ -1,0 +1,4319 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>
+Eticadata.Tables
+</name>
+  </assembly>
+  <members>
+    <member name="M:Eticadata.ERP.APVEquipamento.RemoveLinhasComponentesRep(System.String,System.String,System.String,System.Int32)">
+      <summary>
+ Permite remover as linhas de componente associadas a um determinado movimento de Reparação
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.APVEquipamento.ActualizaLinhaComponenteRep(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Nullable{System.DateTime},System.Int32,System.String)">
+      <summary>
+ Permite inserir/actualizar a linha de componente, associada a um determinado movimento de Reparação, com valores de Data e Contador 
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.APVEquipamento.ActualizaLinhaComponenteRep(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Nullable{System.DateTime},System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
+      <summary>
+ Permite inserir/actualizar a linha de componente, associada a um determinado movimento de Reparação, com valores de Data, Contador e Números de série
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.APVEquipamento.ActualizaLinhaComponenteRep(System.Nullable{System.DateTime},System.Int32,System.String)">
+      <summary>
+ Permite actualizar a linha de componente com valores de Data e Contador da última Reparação (provavelmente Reparação diferente da associada à linha de componente)
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.APVEquipamento.ActualizaGarantiaDocumento(Eticadata.ERP.EtiEnums.TpDocumento,System.String,System.String,System.String,System.Int32,System.String,System.DateTime,System.String,System.Int32,System.String)">
+      <summary>
+ Permite criar/actualizar a linha de garantia com valores de Data e Contador da entrada em vigor associada a um documento
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.APVEquipamento.RemoveGarantiaDocumento(Eticadata.ERP.EtiEnums.TpDocumento,System.String,System.String,System.String,System.Int32)">
+      <summary>
+ Permite remover a linha de garantia associada a um documento
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Armazens.FindArmazem(System.String@,System.String@,System.Boolean@)">
+      <summary>
+ Verificar se determinado código de armazém existe e se tem permissão
+ </summary>
+      <param name="strCodArmazem">
+      </param>
+      <param name="strDescricao">
+      </param>
+      <param name="blnGeraLocalizacoes">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Armazens.FindArmazem(System.String@,System.String@,System.Boolean@,System.Boolean)">
+      <summary>
+ Verificar se determinado código de armazém existe e se tem permissão, caso o parametro blnNaoTestaPermArmazem=true, o teste à permissão não será feito
+ </summary>
+      <param name="strCodArmazem">
+      </param>
+      <param name="strDescricao">
+      </param>
+      <param name="blnGeraLocalizacoes">
+      </param>
+      <param name="blnNaoTestaPermArmazem">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Armazens.FindArmazem(System.String@,System.String@,System.Boolean@,System.Boolean,System.String,Eticadata.ERP.CostingMethodTypes@)">
+      <summary>
+ Verificar se determinado código de armazém existe e se tem permissão
+ </summary>
+      <param name="strCodArmazem">
+      </param>
+      <param name="strDescricao">
+      </param>
+      <param name="blnGeraLocalizacoes">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ArtigoPrecoVnd.GetPriceLine(System.Int32)">
+      <summary>
+ Get's the required price line, if doesn't exists, creates it!
+ </summary>
+      <param name="pPriceNumber">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.DataNumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera a data da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Data associada à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.PrecoNumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o preço da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Preço da linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.MargemNumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o margem da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Margem associada à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.IvaNumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o Iva da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Iva associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.MoedaNumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera a moeda da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Moeda associada à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.Desconto1NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o desconto1 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Desconto1 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.Desconto2NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o desconto2 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Desconto2 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.Desconto3NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o desconto3 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Desconto3 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.PrecoAnterior1NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o precoAnterior1 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Preco anterior1 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.DataPrecoAnterior1NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o dataPrecoAnterior1 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Data do preço anterior1 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.PrecoAnterior2NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o precoAnterior2 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Preco anterior2 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.DataPrecoAnterior2NumLin(System.Int32)">
+      <summary>
+ Propriedade que lê/altera o dataPrecoAnterior2 da linha com Número intNumLinha.
+ </summary>
+      <param name="intNumLinha">
+      </param>
+      <value>Número da linha de preço do qual queremos ler/alterar valor.</value>
+      <returns>Data do preço anterior2 associado à linha.</returns>
+      <remarks>Necessário para alteração de registos em massa.</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.LinhaExisteArtigoComponente(System.String)">
+      <summary>
+      </summary>
+      <param name="strCodigo">
+      </param>
+      <returns>0 Based line number</returns>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.ComponentExistsItem(System.String)">
+      <summary>
+      </summary>
+      <param name="pItemCode">
+      </param>
+      <returns>Line number 1 Based!</returns>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.LinhaExisteLinhaComponente(System.Int32)">
+      <summary>
+      </summary>
+      <param name="pNumber">
+      </param>
+      <returns>Line number 1 Based!</returns>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.ComponentExistsNumber(System.Int32)">
+      <summary>
+      </summary>
+      <param name="pNumber">
+      </param>
+      <returns>Line number 1 Based!</returns>
+    </member>
+    <member name="P:Eticadata.ERP.Artigo.UseCompositionSortedByNumber">
+      <summary>
+ Virtual - Determines if the EtiItems1Based Composition is sorted by Number (default - FALSE)
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.IsAlternative(System.String,System.String)">
+      <summary>
+ Checks if pItemCodeAlternative is a valid alternative item to pItemCode
+ </summary>
+      <param name="pItemCode">
+      </param>
+      <param name="pItemCodeAlternative">
+      </param>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.GetLstLinhasPrecoArtigo">
+      <summary>
+ Devolve uma DataView com as linhas de preço
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.GetLstArtigos(System.String)">
+      <summary>
+ Devolve uma DataView com os campos Código e Descriçao dos Artigos que respeitam o filtro. 
+ Se não for indicado filtro devolve todos os artigos
+ </summary>
+      <param name="SqlFiltro">uma string inteiramente SQL com a indicação dos campos  e condição a filtrar</param>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.GetLstArtigos(System.String,System.Boolean)">
+      <summary>
+ Devolve uma DataView com os campos Código e Descriçao dos Artigos que respeitam o filtro. 
+ Se não for indicado filtro devolve todos os artigos
+ </summary>
+      <param name="SqlFiltro">uma string inteiramente SQL com a indicação dos campos  e condição a filtrar</param>
+      <param name="OrderDescricao">para indicar a ordenação da lista a devolver</param>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.GetLstArtigosStd">
+      <summary>
+ Permite obter uma lista de artigos:
+ - Simples
+ - Cujas unidades não tem medidas
+ - Não movimentam Lotes
+ - Não movimentam Números de Série
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.ConverteCodigos(System.String,System.Boolean)">
+      <summary>
+ Função que dado o código interno dá o código e vice-versa
+ Interno significa que o valor passado é interno
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Artigos.ConverteCodigoBarras(System.String)">
+      <summary>
+ Função que dado o código de barras dá o código interno
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.ArtigosBD.TestaCiclosComponentes(Eticadata.ERP.EtiItems1Based{Eticadata.ERP.ItemComposition},System.String@,System.Int32@)">
+      <summary>
+      </summary>
+      <param name="pComposition">
+      </param>
+      <param name="strCodArtigo">
+      </param>
+      <param name="pLine1Based">
+      </param>
+      <returns>Line Number 0 Based!</returns>
+    </member>
+    <member name="M:Eticadata.ERP.ArtigosBD.BDFindArtigoMovimentaStk(System.String@)">
+      <summary>
+ Verifica se um Artigo Movimenta Stocks
+ </summary>
+      <param name="strCodArtigo">Código do Artigo a procurar.</param>
+      <returns>Devolve True se o Artigo Movimenta Stocks</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ArtigosBD.BDFindArtigoSujeitoEncargos(System.String@)">
+      <summary>
+ Verifica se um Artigo está sujeito a encargos
+ </summary>
+      <param name="strCodArtigo">Código do Artigo a procurar.</param>
+      <returns>Devolve True se o Artigo está sujeito a encargos</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ItemComposition.ItemDescription">
+      <summary>
+ Vitual Property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.ItemComposition.ItemMedStkCode">
+      <summary>
+ Vitual Property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.ItemComposition.ItemDontMoveStock">
+      <summary>
+ Vitual Property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.ItemComposition.WharehouseDescription">
+      <summary>
+ Vitual Property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.ItemComposition.Total">
+      <summary>
+ Virtual
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.ItemCompositionMenuSuggestion.ItemDescription">
+      <summary>
+ Vitual Property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.Grelha.CodGrelha(System.Int16)">
+      <summary>
+ Apenas utilizada no Integrador OFF-Line
+ </summary>
+      <param name="intLinha">
+      </param>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Grelha.DescricaoLinhaGrelha(System.Int16)">
+      <summary>
+ Apenas utilizada no Integrador OFF-Line
+ </summary>
+      <param name="intLinha">
+      </param>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Grelha.QuantidadeGrelha(System.Int16)">
+      <summary>
+ Apenas utilizada no Integrador OFF-Line
+ </summary>
+      <param name="intLinha">
+      </param>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Grelha.OrdemGrelha(System.Int16)">
+      <summary>
+ Apenas utilizada no Integrador OFF-Line
+ </summary>
+      <param name="intLinha">
+      </param>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Grelha.CountIdiomasGrelhaLin">
+      <summary>
+ Total de linhas da tabela de descrições de idiomas "tbl_gce_grelhasLinIdiomas"
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Grelha.AlteraCodigo(System.Int32,System.String)">
+      <summary>
+ Altera o código de uma linha da grelha
+ </summary>
+      <param name="row">
+      </param>
+      <param name="Texto">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Grelha.AlteraDescricao(System.Int32,System.String)">
+      <summary>
+ Altera a descrição de uma linha da grelha
+ </summary>
+      <param name="row">
+      </param>
+      <param name="Texto">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Grelha.AlteraQuantidade(System.Int32,System.Double@)">
+      <summary>
+ Altera a quantidade de uma linha da grelha
+ </summary>
+      <param name="row">
+      </param>
+      <param name="dblQtd">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Grelha.CountLin">
+      <summary>
+ Total de linhas da grelha "tbl_gce_grelhas_lin"
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Referencia.TestaUDECamposAdicionaisCab(System.String)">
+      <summary>
+Este TestaUDECamposAdicionaisCab é para Tratar os Eventos nos Campos Adicionais da Referência, é chamado da janela de ReferÊnciasArtigos
+ </summary>
+      <param name="strCampoAdicional">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Unidades.GetCasasDec(System.String,System.Int32@)">
+      <summary>
+ Este método, devolve o maior número de casas decimais para um intervalo de artigos
+ </summary>
+      <param name="strFiltro">
+      </param>
+      <param name="intCasasDec">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ImpostosAutomoveis.GetCalculoISV_Pos2020(System.Int32,System.Double,System.DateTime,System.DateTime,System.Byte,System.Byte,System.Byte,System.Int16,Eticadata.ERP.AutoGestEnums.eTpImpostoAuto,Eticadata.ERP.AutoGestEnums.eTpTestDrivingCycleCO2)">
+      <summary>
+ Devolve o calculo do Imposto sobre veiculos apos 2020 
+ </summary>
+      <param name="pCilindrada">
+      </param>
+      <param name="pEmissoesCo2">
+      </param>
+      <param name="pDataPrimMatricula">
+      </param>
+      <param name="pDataLegal">
+      </param>
+      <param name="pTpVeiculo">
+      </param>
+      <param name="pTpCombustivel">
+      </param>
+      <param name="pOrigem">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Marcas.GetAutoGestAvailableBrands">
+      <summary>
+ Return the Brands available in AutoGest
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.GetNew(System.String[])">
+      <summary>
+ Novo registo de modelo de uma determinada marca
+ </summary>
+      <param name="ValorChave">Array de Strings com uma posição - o código da marca</param>
+      <returns>Devolve um novo modelo de uma marca</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.GetAutoGestAvailableModels">
+      <summary>
+ returns the models whose brands are available in autogest
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.GetLstModelosFiltro(System.String)">
+      <summary>
+ Devolve uma DataView com os campos Código e Descriçao dos Modelos que respeitam o filtro. 
+ O filtro é um conjunto de marcas. Caso seja vazio, devolve todos os modelos.
+ </summary>
+      <param name="codMarcas">uma string, com os codigos das marcas pretendidas entre '', separados por ,. Ex: 'AUDI','VOLVO'</param>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.MoveFirst(System.String[])">
+      <summary>
+ Primeiro registo de modelo de uma determinada marca
+ </summary>
+      <param name="ValorChave">Array de Strings com uma posição - o código da marca</param>
+      <returns>Devolve o primeiro modelo de uma marca</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.MoveLast(System.String[])">
+      <summary>
+ Último registo de modelo de uma determinada marca
+ </summary>
+      <param name="ValorChave">Array de Strings com uma posição - o código da marca</param>
+      <returns>Devolve o último modelo de uma marca</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.MoveNext(System.String[])">
+      <summary>
+ Próximo registo de modelo de uma determinada marca
+ </summary>
+      <param name="ValorChave">Array de Strings com uma posição - o código da marca</param>
+      <returns>Devolve o próximo modelo de uma marca</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Modelos.MovePrevious(System.String[])">
+      <summary>
+ Anterior registo de modelo de uma determinada marca
+ </summary>
+      <param name="ValorChave">Array de Strings com uma posição - o código da marca</param>
+      <returns>Devolve um novo modelo de uma marca</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.NiveisEquipamentos.MoveFirst(System.String[])">
+      <summary>
+ Primeiro registo de nivel de equipamento de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve o primeiro nível de equipamento de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.NiveisEquipamentos.MoveLast(System.String[])">
+      <summary>
+ Último registo de nivel de equipamento de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve o último nível de equipamento de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.NiveisEquipamentos.MoveNext(System.String[])">
+      <summary>
+ Próximo registo de nivel de equipamento de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve o próximo nível de equipamento de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.NiveisEquipamentos.MovePrevious(System.String[])">
+      <summary>
+ Anterior registo de nivel de equipamento de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve o anterior nível de equipamento de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Situacoes.GetSituacaoInicial">
+      <summary>
+ Devolve a situação inicial
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRAC_byTipo(Eticadata.ERP.EtiEnums.eTpCustosRAC)">
+      <summary>
+ Devolve o Tipo de Custo activo (do utilizador) associado associado á configuração de custos de rent-a-car (genérios)
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACDia">
+      <summary>
+ Devolve o Tipo de Custo associado ao Dia.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACDiaExtra">
+      <summary>
+ Devolve o Tipo de Custo associado ao Dia Extra.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACKm">
+      <summary>
+ Devolve o Tipo de Custo associado ao Km.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACKmExtra">
+      <summary>
+ Devolve o Tipo de Custo associado ao Km Extra.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACFranquia">
+      <summary>
+ Devolve o Tipo de Custo associado ao Franquia.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACTaxaDanos">
+      <summary>
+ Devolve o Tipo de Custo associado à Taxa de Danos.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACDano">
+      <summary>
+ Devolve o Tipo de Custo associado ao Dano.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACTaxaAereo">
+      <summary>
+ Devolve o Tipo de Custo associado ao Taxa Aereo.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACTaxaOW">
+      <summary>
+ Devolve o Tipo de Custo associado ao Taxa OW.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACHora">
+      <summary>
+ Devolve o Tipo de Custo associado à Hora.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetTipoCustoRACHoraExtra">
+      <summary>
+ Devolve o Tipo de Custo associado à Hora Extra.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.GetLstCustos">
+      <summary>
+ Devolve a lista de tipos custos de rent-a-car, com as colunas Código, Descrição, Código Artigo e Código Taxa IVA, ordenado por tipo custo.
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustosRAC.UpdateCustos(System.Data.DataSet)">
+      <summary>
+ Actualiza a tabela de tipos de custos
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustos.GetTipoCustoAverbamento">
+      <summary>
+ Devolve o Tipo de Custo associado ao Averbamento.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustos.GetTipoCustoIa">
+      <summary>
+ Devolve o Tipo de Custo associado ao Ia.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustos.GetTipoCustoJuroStock">
+      <summary>
+ Devolve o Tipo de Custo associado ao Juro de Stock.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustos.GetTipoCustoOficinas">
+      <summary>
+ Devolve o Tipo de Custo associado a reparação de oficinas.
+ Caso não exista devolve nothing
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposCustos.GetTabelaValoresCustos">
+      <summary>
+ Devolve uma lista com todos os Tipos de Custo aConnection figurados para afectar valor de venda.
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposSeguros.GetLstSeguros">
+      <summary>
+ Devolve a lista de tipos seguros de rent-a-car
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Versoes.GetNew(System.String[])">
+      <summary>
+ Novo registo de versao de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código do modelo</param>
+      <returns>Devolve um novo modelo de uma marca</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Versoes.MoveFirst(System.String[])">
+      <summary>
+ Primeiro registo de versão de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve a primeira versão de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Versoes.MoveLast(System.String[])">
+      <summary>
+ Último registo de versão de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve a última versão de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Versoes.MoveNext(System.String[])">
+      <summary>
+ Próximo registo de versão de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve a próxima versão de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Versoes.MovePrevious(System.String[])">
+      <summary>
+ Anterior registo de versão de uma determinada marca-modelo
+ </summary>
+      <param name="ValorChave">Array de Strings com o código da marca e código modelo</param>
+      <returns>Devolve a anterior versão de uma marca-modelo</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Viatura.QuietMode">
+      <summary>
+ Permite a actualização dos valores da viatura sem que sejam levantados os eventos correspondentes ...
+ </summary>
+    </member>
+    <member name="P:Eticadata.ERP.Viatura.ProcessoMode">
+      <summary>
+ Se viatura em edição através do Processo
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viatura.ProcessoMode_SetChave(System.String,System.String,System.String,System.Int32,System.String)">
+      <summary>
+ Indicação externa do processo associado á viatura
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viatura.RemoveLinhasComponentesOR(System.String,System.String,System.String,System.Int32)">
+      <summary>
+ Permite remover as linhas de componente associadas a um determinado movimento de Reparação
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viatura.ActualizaLinhaComponenteOR(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Nullable{System.DateTime},System.Int32,System.String)">
+      <summary>
+ Permite inserir/actualizar a linha de componente, associada a um determinado movimento de Reparação, com valores de Data e Contador 
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viatura.ActualizaLinhaComponenteOR(System.Nullable{System.DateTime},System.Int32,System.String)">
+      <summary>
+ Permite actualizar a linha de componente com valores de Data e Contador da última Reparação (provavelmente Reparação diferente da associada à linha de componente)
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetLstViaturasRAC(System.String,System.Boolean,System.DateTime,System.DateTime)">
+      <summary>
+ Devolve uma lista das viatura disponiveis para rent-a-car
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetLstViaturasDescritivos(System.String,System.String,System.String)">
+      <summary>
+ Devolve uma lista (DataView) com viaturas e principais descritivos da sua caracterização
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetLstViaturasDescritivos(System.String,System.String,System.String,System.Int32)">
+      <summary>
+ Devolve uma lista (DataView) com viaturas e principais descritivos da sua caracterização, filtrando por entidade
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetLstViaturasDescritivosLight(System.String,System.String,System.String,System.Int32)">
+      <summary>
+ Devolve uma lista (DataViewLight) com viaturas e principais descritivos da sua caracterização, filtrando por entidade
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetLstViaturasProcessos(Eticadata.ERP.Viaturas.FiltroLista,System.String@)">
+      <summary>
+ Devolve uma lista com as viaturas e processos que respeitam o filtro indicado
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetLstViaturaProcessos(System.String,System.Boolean)">
+      <summary>
+ Devolve uma lista com os processos da viatura
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Viaturas.GetImagens">
+      <summary>
+ Devole um DataTable com as Viaturas para Venda (cujo estado do processo considera a viatura não vendida).
+ </summary>
+      <returns>Um DataTable com seis Colunas: Marca / Modelo da Viatura, Imagem(s) respectiva, Titulo, Descrição, Data e Layout da imagem.</returns>
+    </member>
+    <member name="P:Eticadata.ERP.Viatura_Historico.Situacao">
+      <summary>
+ Situação genérica associada a um movimento (em curso, fechado, anulado, ...)
+ </summary>
+    </member>
+    <member name="P:Eticadata.ERP.Viatura_Historico.DescEstado">
+      <summary>
+ Descrição do contexto do estado associado ao um movimento 
+ </summary>
+    </member>
+    <member name="P:Eticadata.ERP.Viatura_Historico.Descricao">
+      <summary>
+ Descrição do movimento 
+ </summary>
+    </member>
+    <member name="P:Eticadata.ERP.CachesTables.Currencies">
+      <summary>
+ Key - Case Insensitive!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.CachesTables.MeansOfPaymentInfo">
+      <summary>
+ Key - Case Insensitive!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.CartoesClientes.GetClienteCartao(System.String)">
+      <summary>
+ Devolve o Dados do cliente que esta associado a um cartão 
+ </summary>
+      <param name="strCodCartao">Código do Cartão</param>
+    </member>
+    <member name="M:Eticadata.ERP.CartoesClientes.UpdateBulk(System.Collections.Generic.List{Eticadata.ERP.PrePaidCardAux})">
+      <summary>
+      </summary>
+      <param name="pPrePaidCards">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.CartoesClientes.UpdateBulk(System.Collections.Generic.List{Eticadata.ERP.PrePaidCardAux},Eticadata.ERP.EtiConnNetBD)">
+      <summary>
+      </summary>
+      <param name="pPrePaidCards">
+      </param>
+      <param name="pEtiConnection">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.CatalogoFornecedor.FicheiroUI">
+      <summary>
+Nome do ficheiro da exportação 
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.CategoriaEntidades.GetLstCategoriaEntidades">
+      <summary>
+ Devolve um DataView com os campos "Código" e "Descrição" da tabela "Tbl_Categoria_Entidade"
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.CategoriaEntidades.lstCategoriaEntidades">
+      <summary>
+ Devolve um DataTable com todos os campos da tabela "Tbl_Categoria_Entidade"
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Diario.Numerador(System.Int32)">
+      <summary>
+      </summary>
+      <param name="Mes">Use -1 as default value</param>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ParDecls.GetDsInfCamposParamAnexo(System.String)">
+      <summary>
+ Função a implementar do interface IParametrizações, a qual devolve um 
+ DataSet (constituido por 3 (Modelo22) ou 5 (IES/DA) DataTables onde cada um efectua o Distinct a um Campo)
+ com todos os registos da tabela "Tbl_Ctb_DeclAnu_CamposParam" ou "Tbl_Ctb_M22_CamposParam" consoante 
+ o tipo de parametrização e para um dado módulo(lic.) e para um dado Anexo. 
+ </summary>
+      <param name="strAnexo">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Filiais.GetLstPOSFiliaisSeccoes">
+      <summary>
+ obter a lista de filiais com secções com permissão
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumento.LetIndexGCE(System.Int16)">
+      <summary>
+ Função que serve para alterar o valor dos campos
+ bitJanela[Compras;Stocks;Vendas;Liquidacoes] consoante
+ o index seleccionado na combo cboGCE da form frmEditarTiposDocumento)
+ </summary>
+      <param name="index">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumento.GetIndexGCE">
+      <summary>
+ Função que devolve o indice do ListIndex da Combo cboGCE que está a TRUE=1
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumento.ValidaTamNumerador(System.String@,System.String@)">
+      <summary>
+ Valida o tamanho do Numerador em relação ao número de cardinais existentes no Formato,
+ o número de caracteres do Numerador não poderá ser maior que o Nºcardinais do Formato.
+ </summary>
+      <param name="strFormato">
+      </param>
+      <param name="strNumerador">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumento.GetFormatoSubst(System.String,System.String,System.String)">
+      <summary>
+ Função que devolve o Formato com as sequências(!AAAA!,!MM!... -&gt; ,Ano, Mês) substituidas
+ </summary>
+      <param name="Formato">
+      </param>
+      <param name="Ano">
+      </param>
+      <param name="Mes">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumento.GetProxNum(System.Int32,System.String,System.Int32,System.Byte)">
+      <summary>
+ Função que devolve o próximo numerador, dado o Formato e o Número
+ </summary>
+      <param name="num">
+      </param>
+      <param name="Formato">
+      </param>
+      <param name="Ano">
+      </param>
+      <param name="Mes">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TipoDocumentoLigCte.MovStockGeraMovCtb">
+      <summary>
+ Verificar se o movimento de stock gera movimento de contabilidade
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumentoLigCte.AddLin(System.Int32@)">
+      <summary>
+ Adicionar uma linha
+ </summary>
+      <param name="intLinha">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumentoLigCte.RemLin(System.Int32@)">
+      <summary>
+ Remover uma linha
+ </summary>
+      <param name="intLinha">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoDocumentoLigCteS.GetLstTiposDocumentos">
+      <summary>
+ Devolve uma lista com todos os Tipos de Documentos
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstDocumentos(System.String,System.String)">
+      <summary>
+  Devolve uma lista com a abreviatura, descrição   do tipo de documento respectivo
+ </summary>
+      <param name="TipoDoc">Igual ao parametro de inicialização da classe</param>
+      <param name="SqlFiltro">instrução sql com outras condições de filtro a realizar</param>
+      <returns>Devolve um Datview com o resultado da consulta</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstDocumentosStkIntrod(System.String)">
+      <summary>
+  Devolve uma lista com a abreviatura, descrição dos documentos passíveis de movimentar Stocks (os mesmo que são listados na introdução de stocks
+ </summary>
+      <param name="SqlFiltro">instrução sql com outras condições de filtro adicionais a realizar</param>
+      <returns>Devolve um Datview com o resultado da consulta</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.FindCodCondPag(System.String)">
+      <summary>
+ Get's the default Payment condition of document type
+ This value will be cached in runtime!
+ </summary>
+      <param name="strAbrevTpDoc">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstDocumentos(System.String,System.String,System.String,System.String)">
+      <summary>
+  Devolve uma lista com a abreviatura, descrição   do tipo de documento respectivo
+ </summary>
+      <param name="TipoDoc">Igual ao parametro de inicialização da classe</param>
+      <param name="SqlFiltro">instrução sql com outras condições de filtro a realizar</param>
+      <param name="CodSeccao">código da secção a verificar a disponíbilidade</param>
+      <param name="CodExercicio">código do exercício a verificar a disponíbilidade</param>
+      <returns>Devolve um Datview com o resultado da consulta</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstDocumentosVias(System.String,System.String)">
+      <summary>
+  Devolve uma lista com as vias de tipo de documento
+ </summary>
+      <param name="AbrevTipoDoc">abreviatura do tipo de documento</param>
+      <param name="SqlFiltro">instrução sql com outras condições de filtro a realizar</param>
+      <returns>Devolve um Datview com o resultado da consulta</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstDocumentosImagens(System.String,System.String)">
+      <summary>
+  Devolve uma lista com as imagens (ficheiros crokies) de tipo de documento
+ </summary>
+      <param name="AbrevTipoDoc">abreviatura do tipo de documento</param>
+      <param name="SqlFiltro">instrução sql com outras condições de filtro a realizar</param>
+      <returns>Devolve um Dataview com o resultado da consulta</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetTOP1AbbrevCashSessionClosing(System.String,System.String,System.String)">
+      <summary>
+ Obter o TOP1 da abreviatura do Fecho da Sessão de Caixa correspondente à abreviatura da abertura de caixa, secção e empresa... obter informação nos Postos (sistema)
+ </summary>
+      <param name="pCashSessionOpeningAbbrev">Abreviatura de Abertura da Sessão de Caixa</param>
+      <param name="pSectionCode">Código da Secção atual</param>
+      <param name="pCompanyCode">Código da empresa atual</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetCashSessionClosingTpDocTOP1">
+      <summary>
+ Obter a abreviatura(TOP 1) para o tipo de operação Fecho de Caixa "FC" na tabela de Tipos de Documentos
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetDocumentosPOS(Eticadata.ERP.EtiEnums.TpDocPOS,System.Boolean,System.String)">
+      <summary>
+ Devolve a lista de documentos disponíveis para POS por tipo
+ </summary>
+      <param name="intTipoDoc">Tipo de Documento</param>
+      <returns>strAbreviatura, strDescricao</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.IsDocValidoParaConversao(System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+      <summary>
+ Indica se um documento pode ser destino de uma conversão
+ </summary>
+      <param name="pAbrevTpDocOrig">
+      </param>
+      <param name="pTpEntidadeOrig">
+      </param>
+      <param name="pTpNaturezaOrig">
+      </param>
+      <param name="pCodSeccaoDest">
+      </param>
+      <param name="pAbrevTpDocDest">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstDocs(System.String,System.String,System.Boolean,System.String,System.String,System.Boolean,System.Nullable{System.Boolean},System.Boolean)">
+      <summary>
+ Lista de Documentos para o Cabeçalho.
+ </summary>
+      <param name="strCodExercico">Exercício do documento</param>
+      <param name="strCodSeccao">Secção do Documento</param>
+      <param name="strAbrevTpDocOri">Documento de Origem</param>
+      <param name="intTpNatureza">Natureza</param>
+      <param name="venda">Se é Venda ou Devolução</param>
+      <returns>DataView (Abreviatura, Descrição)</returns>
+      <remarks>No caso de conversão de documentos a strAbrevTpDocOri e intTpNatureza são preenchidos!!!</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TiposDocumentos.FieldsToCondAdicional(System.String)">
+      <summary>
+ Devolve os Campos a usar numa condição adicional à condição da Chave, para os Moves e Finds de Movimentos (p.e.: MovCaixa)
+ </summary>
+      <param name="Tabela">Tabela cujos campos pretendemos.</param>
+      <returns>Devolve os Campos que devem ser incluídos em Condições de Pesquisa, tanto na Movimentação entre registos, como no "Find". Os campos vêm separados por virgulas. </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetLstTpDocumentosEncomendas(System.Boolean)">
+      <summary>
+  Devolve uma lista com a abreviatura, descrição de tipo de documentos das encomendas
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposDocumentos.GetStringDocumentoSuspenso">
+      <summary>
+ Devolve uma string com os documentos de venda suspensa
+ </summary>
+      <returns>Ex: ('SUSVD','SUSVD2')</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Clientes.FindContractOverdueDocs(System.Int32,System.String,System.String,System.String,System.Int32)">
+      <summary>
+ Checks Existence of Overdue Documents
+ This function Checks the Existence of Overdue Documents for a given Customer Code, Fiscal PErid, Section Code Contract Type And Contract Number
+ </summary>
+      <param name="pCustomerCode">Customer Code</param>
+      <param name="pContractFiscalYearCode">Fiscal Period</param>
+      <param name="pContractSectionCode">Section Code</param>
+      <param name="pContractTypeCode">Contract Type Code</param>
+      <param name="pContractNumber">Contract Number</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.Clientes.GetSaldoCC(System.Int32)">
+      <summary>
+ Returns the checking sccount balance of a costumer.
+ </summary>
+      <param name="pCodCliente">
+      </param>
+      <returns>
+      </returns>
+      <remarks>OBSOLETE: Try to use GetBalanceCA</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ClientesBD.GetBalanceCA(System.Int32)">
+      <summary>
+ Returns the Checking Account Balance of a costumer
+ </summary>
+      <param name="pCodCostumer">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ClientesBD.GetBalanceCA(System.Int32,System.DateTime)">
+      <summary>
+ Returns the Checking Account Balance of a costumer at a specific date
+ </summary>
+      <param name="pCodCostumer">
+      </param>
+      <param name="pAtDate">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ClientesBD.BDGetBalanceDue(System.Int32)">
+      <summary>
+ Gets the balance due of an entity - Customer [Saldo Vencido]
+ </summary>
+      <param name="pCodEntity">Filter by entity ID</param>
+      <returns>Returns a double with the balance due of an entity</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Direccoes.PosNumeroOnKey">
+      <summary>
+ Posição do campo Numero na Chave do Movimento (contando com base 0 - 0,1,2,3,....)
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Direccoes.GetDireccoes(System.String)">
+      <summary>
+ Função criada para Uso da Funcionalidade Alteração de Registos em MAssa
+ </summary>
+      <param name="strCodCliente">Código do Cliente - Recebe uma string porque a coluna que possui a informação
+ do código do Cliente está definida como String.</param>
+      <returns>DataView</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Fornecedor.InversaoIVA">
+      <summary>
+ Propriedade que permite identificar se o fornecedor está em Regime IVA - Inversão Suj.Passivo
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Fornecedores.ExisteNC(System.String,System.Int32,System.Int32@)">
+      <summary>
+ valida se já existe número de contribuinte
+ </summary>
+      <param name="strNC">
+      </param>
+      <param name="CodigoIN">
+      </param>
+      <param name="CodigoOut">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.FornecedoresBD.BDGetBalanceDue(System.String)">
+      <summary>
+ Gets the balance due of an entity - Supplier [Saldo Vencido]
+ </summary>
+      <param name="pCodEntity">Filter by entity ID</param>
+      <returns>Returns a double with the balance due of an entity</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.OutrosCredor.InversaoIVA">
+      <summary>
+ Propriedade que permite identificar se o outro credor está em Regime IVA - Inversão Suj.Passivo
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.OutrosDevedores.ExisteNC(System.String,System.Int32,System.Int32@)">
+      <summary>
+ valida se já existe número de contribuinte
+ </summary>
+      <param name="strNC">
+      </param>
+      <param name="CodigoIN">
+      </param>
+      <param name="CodigoOUT">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vendedor.AddLinhaVendedorPostos(System.Int32)">
+      <summary>
+ Função criada para Uso da Funcionalidade Alteração de Registos em MAssa
+ </summary>
+      <param name="index">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.ListaObjectos">
+      <summary>
+ Função que devolve uma ListaObjectos
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.CountListaObjectos">
+      <summary>
+ Contador da ListaObjectos
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.AddListaObjectos(Eticadata.ERP.EtiquetasCampo@)">
+      <summary>
+  Função que adiciona um novo objecto á ListaObjectos
+ </summary>
+      <param name="ObjEtiqCp">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.AddListaObjectos(Eticadata.ERP.EtiquetasCampo,System.Int32)">
+      <summary>
+ Função que adiciona um novo objecto á ListaObjectos
+ </summary>
+      <param name="ObjEtiqCp">
+      </param>
+      <param name="index">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.RemListaObjectos(System.Int32)">
+      <summary>
+ Remover da lista um dado objecto: ListaObjectos
+ </summary>
+      <param name="intCount">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.CountListaObjCabFam">
+      <summary>
+ Contador da ListaObjCabFam
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.AddListaObjCabFam(Eticadata.ERP.EtiquetasCampo@)">
+      <summary>
+ Função que adiciona um novo objecto á ListaObjCabFam
+ </summary>
+      <param name="ObjEtiqCp">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.AddListaObjCabFam(Eticadata.ERP.EtiquetasCampo@,System.Int16@)">
+      <summary>
+ Função que adiciona um novo objecto á ListaObjCabFam
+ </summary>
+      <param name="ObjEtiqCp">
+      </param>
+      <param name="index">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.RemListaObjCabFam(System.Int16@)">
+      <summary>
+ Remover da lista um dado objecto: ListaObjCabFam
+ </summary>
+      <param name="intCount">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiqueta.xml">
+      <summary>
+ Retorna a String XML do Objecto
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiquetas.Initialize">
+      <summary>
+ Atribuição de variaveis de estado global
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiquetas.Initialize(Eticadata.ERP.EtiEnums.TpEtiqueta@)">
+      <summary>
+ Atribuição de variaveis de estado global
+ </summary>
+      <param name="pTpEtiq">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiquetas.TrataCamposCabFamilia(System.String,System.String@,System.String@)">
+      <summary>
+ Função especifica das Listagens de Artigos - Utilitários
+ </summary>
+      <param name="strDescricao">
+      </param>
+      <param name="strFiltroLeftJoin">
+      </param>
+      <param name="strTabTempFam">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Etiquetas.GetFiltrosFamilia(Eticadata.ERP.Etiqueta,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+      <summary>
+ Função especifica das Listagens de Artigos, que devolve o recordSet Família
+ </summary>
+      <param name="objEtiqueta">
+      </param>
+      <param name="strCamposSelectFam">
+      </param>
+      <param name="strFiltroLeftJoinFam">
+      </param>
+      <param name="strFiltroWhereFam">
+      </param>
+      <param name="strFiltroOrderByFam">
+      </param>
+      <param name="strMsgError">
+      </param>
+      <param name="strTabTempFam">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.EtiquetasBD.RcSetEtiqueta(System.String,System.String@,System.Boolean)">
+      <summary>
+ Função que devolve um recordset com o resultados do SQL que entra por parametro!
+ </summary>
+      <param name="strSql">
+      </param>
+      <param name="strMsgErro">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.EtiquetasBD.GetValoresDatasStk(System.String,System.Object@,System.Object@)">
+      <summary>
+ Função que devolve os valores das últimas Datas de Entrada e de Saída para o Código de Artigo em causa!
+ </summary>
+      <param name="strCodArtigo">
+      </param>
+      <param name="dtmUltEntrada">
+      </param>
+      <param name="dtmUltSaida">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.EtiquetasCampo.IsSelecting(System.Single,System.Single)">
+      <summary>
+ Verifica se um dado Objecto está ou não seleccionado
+ </summary>
+      <param name="X">
+      </param>
+      <param name="Y">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.EtiquetasCampo.IsResizing(System.Single,System.Single)">
+      <summary>
+ Verifica se um dado Objecto está dentro dos limites passados nos parametros X e Y.
+ </summary>
+      <param name="X">
+      </param>
+      <param name="Y">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.EtiquetasCampo.Resize(System.Drawing.Graphics@,System.Single,System.Single,System.Drawing.Color)">
+      <summary>
+ Faz o redimensionamento do objecto, conforme os parâmetros passados, X e Y.
+ </summary>
+      <param name="X">
+      </param>
+      <param name="Y">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.EtiquetasCampo.Replace(System.Drawing.Graphics@,System.Single,System.Single,System.Drawing.Color)">
+      <summary>
+ Actualiza o posicionamento do objecto para as novas coordenadas X e Y, passadas por parâmetro.
+ </summary>
+      <param name="X">
+      </param>
+      <param name="Y">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="T:Eticadata.ERP.DataSet1">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DataSet1.Items">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.DescontosADSE_CAB">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Codigo_Servico">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Data_Receita">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.NIPC_Entidade">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Nome_Entidade">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Total_Registos">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Total_Descontos">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Total_Contribuicao">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Ref_DUC">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Retencao_OE">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_CAB.Versao">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.DescontosADSE_LIN">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Codigo_Servico">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Data_Receita">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.NUB">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.NIF">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Numero_CGA">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.NISS">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Nome">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Tipo_Movimento">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Data_Reporte">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Valor_Remun_Pensao">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Valor_Desconto">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Valor_Incidencia_Contribuicao">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Valor_Incidencia_ContribuicaoSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Valor_Contribuicao">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Transf_NIPC_Entidade">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.DescontosADSE_LIN.Transf_Data">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.Modelo30">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.Mes">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.JustoImpedimento">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.DataJustoImpedimento">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.DataJustoImpedimentoSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.Retidas">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.Guia">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30.Registo">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.Modelo30Retidas">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Dividendos">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.DividendosSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Juros">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.JurosSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Royalties">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.RoyaltiesSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.TrabDependente">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.TrabDependenteSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.TrabIndependente">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.TrabIndependenteSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Comissoes">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.ComissoesSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Prediais">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.PrediaisSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Pensoes">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.PensoesSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Servicos">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.ServicosSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.RemuneracoesPublicas">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.RemuneracoesPublicasSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.PensoesPublicas">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.PensoesPublicasSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.Outros">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Retidas.OutrosSpecified">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.SequenciaType">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.SequenciaType.numero">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.DeclaracaoType2">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.DeclaracaoType2.Declarante">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.DeclaracaoType2.TOC">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.DeclaracaoType2.Ano">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.DeclaracaoType2.SF">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.DeclaracaoType2.Tipo">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.TipoDeclType">
+      <observações />
+    </member>
+    <member name="F:Eticadata.ERP.Modelo30XSD.TipoDeclType.Item1">
+      <observações />
+    </member>
+    <member name="F:Eticadata.ERP.Modelo30XSD.TipoDeclType.Item2">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.Modelo30Guia">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Guia.Valor">
+      <observações />
+    </member>
+    <member name="T:Eticadata.ERP.Modelo30XSD.Modelo30Registo">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Beneficiario">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.NIFEstrangeiro">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Pais">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.PercCapitalD">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.PercCapitalDSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.PercCapitalS">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.PercCapitalSSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.TipoRend">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Rendimento">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Tributacao">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Taxa">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.TaxaSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Retencao">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.RetencaoSpecified">
+      <observações />
+    </member>
+    <member name="P:Eticadata.ERP.Modelo30XSD.Modelo30Registo.Emitente">
+      <observações />
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.ProcFiscalYearCode">
+      <summary>
+ Fiscal year code of processing period (that have processed a line of Allowances, Discounts or Faults
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.ProcDateInit">
+      <summary>
+ String with a starting date (YYYY-MM-dd) of processing period (that have processed a line of Allowances, Discounts or Faults
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.ProcDateEnd">
+      <summary>
+ String with a ending date (YYYY-MM-dd) of processing period (that have processed a line of Allowances, Discounts or Faults
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.NumLine">
+      <summary>
+ Number line of Allowance, Discount or Fault (1 to n)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.DateADF">
+      <summary>
+ Date of Allowance, Discount or Fault 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.TypeRegister">
+      <summary>
+ Type of line of Allowance, Discount or Fault - "AD" if is Allowance or Discount; "F" if is Fault
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Code">
+      <summary>
+ Code of Allowance, Discount or Fault 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Value">
+      <summary>
+ Value of Allowance, Discount or Fault 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.TypeOfValue">
+      <summary>
+ Type of Value for Allowance, Discount or Fault 
+ Values: Allowances and Disconts: "V" for Value , "F" for Fixed ; "%" for Percent, ...  ; Faults - "D" value in days, "H" value in hours; 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Normal">
+      <summary>
+ Set "true" for process Allowance and Discount at Normal receipt
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Vacations">
+      <summary>
+ Set "true" for process Allowance and Discount at Vacations Allowances receipt
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Christmas">
+      <summary>
+ Set "true" for process Allowance and Discount at Christmas Allowances receipt
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.DateReceipt">
+      <summary>
+ Date for receipt that include this Allowance, Discount or Fault
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.DateEffect">
+      <summary>
+ Date Effect that include this Allowance, Discount or Fault (for CGA Discounts)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.TypeReceipt">
+      <summary>
+ When "Normal" is "true", set a letter at this property for ohter receipt to include this Allowance and discount
+ Values: Use valor of contantes at "ConstantesGrh.DescricaoRecibos"
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.HourInit">
+      <summary>
+ Start Hour for Allowance, Discount or Fault 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.HourEnd">
+      <summary>
+ End Hour for Allowance, Discount or Fault 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.DateEnd">
+      <summary>
+ End Date for Allowance, Discount or Fault 
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.OverTimeRasonCode">
+      <summary>
+ Rason Code of overtime Allowance
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.CGA_Obs">
+      <summary>
+ Observations for CGA Discounts
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.CurrencyCode">
+      <summary>
+ Currency Code of Allowance, Discount or Fault value (if money value)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Isdisplacement">
+      <summary>
+ Set "true" if this Allowance, Discount ou Fault is related with displacement
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.HoursReductionMonth">
+      <summary>
+ Hours of Reductions by month
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.DaysDiscountFoodAllowanceByFault">
+      <summary>
+ Value of days to discount at Food Allowance (use only on Faults)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Justification">
+      <summary>
+ Set "true" if this Fault have justification (use only on Faults)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.JustificationDoc">
+      <summary>
+ Set "true" if this Fault have document of justification (use only on Faults)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.FaultRasonCode">
+      <summary>
+ Rason Code of Fault (use only on Faults)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.OtherFaults">
+      <summary>
+ Value of others Faults (use only on Faults)
+ </summary>
+    </member>
+    <member name="F:Eticadata.ERP.Process_AllowancesDiscountsFauts.Processed">
+      <summary>
+ Set "true" if this line have processed previously
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Process_AllowancesDiscountsFauts.ReceiptToProcess">
+      <summary>
+ Return bit mask (bit sum of receipt Normal, Vacations and Christmas), that represents the receipts that will be processed
+ </summary>
+      <returns>Returns integer with sum of bit masks</returns>
+    </member>
+    <member name="M:Eticadata.ERP.Process_AllowancesDiscountsFauts.ReceiptToProcessIncide">
+      <summary>
+ Returns a bit mask (bit sum), that represents the total of receipts that include this Allowance, Discount or Fault
+ </summary>
+      <returns>Returns integer with sum of bit masks</returns>
+    </member>
+    <member name="M:Eticadata.ERP.Process_AllowancesDiscountsFauts.Validate(Eticadata.ERP.IEtiAppContextTabelas,System.String@,System.Collections.Generic.List{System.String})">
+      <summary>
+ Validate a line of inputed Allowances, Discounts and Faults, at a Simulate process
+ </summary>
+      <param name="pEtiApp">An instance of EtiApplication, with a user, company and fiscal year context</param>
+      <param name="validateMessage">Output result message of validation</param>
+      <param name="listMsg">Other result messages generated at validation</param>
+      <returns>Return "true" if all criteries are valide, and "false" at other cases</returns>
+    </member>
+    <member name="M:Eticadata.ERP.Acumulado.InsereNovaLinhaRegistoPessoal(System.String,System.Int32,Eticadata.ERP.EtiEnums.Grh_ValsTiposRegisto,System.DateTime,System.DateTime,System.String,System.DateTime,System.Double,System.String,System.DateTime,System.DateTime,System.String)">
+      <summary>
+      </summary>
+      <param name="strCodigoExercicio">
+      </param>
+      <param name="pCodigoFunc">
+      </param>
+      <param name="pTipoRegisto">
+      </param>
+      <param name="dtmData">
+      </param>
+      <param name="dtmDataInicio">Use 'Nothing' as default value</param>
+      <param name="pTipo">Use 'Nothing' as default value</param>
+      <param name="dtmDataFim">Use 'Nothing' as default value</param>
+      <param name="valor">Use 'Nothing' as default value</param>
+      <param name="Moeda">Use 'Nothing' as default value</param>
+      <param name="dtmProcDataInicio">Use 'Nothing' as default value</param>
+      <param name="dtmProcDataFim">Use 'Nothing' as default value</param>
+      <param name="strOutrosSituacaoDescricao">Use 'Nothing' as default value</param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="T:Eticadata.ERP.DossierFiscal">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.DossierFiscal.CabecalhoGeral">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.DossierFiscal.Modelo30">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.DossierFiscal.Modelo31">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.DossierFiscal.Modelo32">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.CabecalhoGeralType">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.CabecalhoGeralType.NIF">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.CabecalhoGeralType.Exercicio">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo32Type">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32Type.Q01Modelo32Cabecalho">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32Type.Q02Modelo32Detalhe">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo32TypeQ01Modelo32Cabecalho">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ01Modelo32Cabecalho.Q01Natureza">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ01Modelo32Cabecalho.Q01Metodo">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32Detalhe">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32Detalhe.Q02Modelo32Linhas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32Detalhe.Q02Modelo32Somas">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0201">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0202">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0203">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0204">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0205">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0206">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0207">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0208">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0209">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Item">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.ItemElementName">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0212">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0213">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0213Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0214">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0214Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0215">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0216">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Linha.Q0216Specified">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.ItemChoiceType">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.ItemChoiceType.Q0210">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.ItemChoiceType.Q0211">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna05">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna06">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna08">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna09">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna12">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna13">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna15">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo32TypeQ02Modelo32DetalheQ02Modelo32Somas.Q02Coluna16">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo31Type">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31Type.Q01Modelo31Cabecalho">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31Type.Q02Modelo31Detalhe">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo31TypeQ01Modelo31Cabecalho">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ01Modelo31Cabecalho.Q01Natureza">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31Detalhe">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31Detalhe.Q02Modelo31Linhas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31Detalhe.Q02Modelo31Somas">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0201">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0202">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0203">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0204">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0205">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0206">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0207">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0208">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0209">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0209Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0210">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0211">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0211Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0212">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Linha.Q0213">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.MaisOuMenos">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.MaisOuMenos.Item">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.MaisOuMenos.Item1">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Somas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Somas.Q02Coluna02">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Somas.Q02Coluna08">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo31TypeQ02Modelo31DetalheQ02Modelo31Somas.Q02Coluna13">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30Type">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30Type.Q02Modelo30Detalhe_I">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30Type.Q02Modelo30Detalhe_II">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30Type.Q02Modelo30Detalhe_III">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30Type.Q03Modelo30">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30Type.Q04Modelo30">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_I">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_I.Q02Modelo30Linhas_I">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_I.Q02Modelo30Somas_I">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0201_1">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0201_2">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0202">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0203">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0204">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0205">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0205Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0206">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0206Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0207">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0207Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0208">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0208Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0209">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0209Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_I.Q0210">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_IQ0201_1">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_IQ0201_1.CRÉDITOSEMCONTENCIOSO">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_IQ0201_1.CRÉDITOSEMMORA">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_IQ0201_1.AJUSTAMENTOSEMINVENTÁRIOS">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Linha_IQ0201_1.OUTROS">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna02">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna03">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna04">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna05">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna06">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna07">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna08">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna09">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IQ02Modelo30Somas_I.Q02Coluna10">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_II">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_II.Q02Modelo30Linhas_II">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_II.Q02Modelo30Somas_II">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0201">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0202">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0203">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0204">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0205">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0205Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0206">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0206Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0207">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0207Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0208">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0208Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0209">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0209Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Linha_II.Q0210">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna02">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna03">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna04">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna05">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna06">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna07">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna08">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna09">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIQ02Modelo30Somas_II.Q02Coluna10">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_III">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_III.Q02Modelo30Linhas_III">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_III.Q02Somas_III">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0201">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0202">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0203">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0204">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0205">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0205Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0206">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0206Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0207">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0207Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0208">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0208Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0209">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0209Specified">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Modelo30Linha_III.Q0210">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna02">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna03">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna04">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna05">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna06">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna07">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna08">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna09">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ02Modelo30Detalhe_IIIQ02Somas_III.Q02Coluna10">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30.Q03Modelo30Linhas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30.Q03Modelo30Somas">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Linha">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Linha.Q0301">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Linha.Q0302">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Linha.Q0303">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Linha.Q0304">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Linha.Q0304Specified">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemContenciosoRelativosaprocessosdeinsolvênciaerecuperaçãodeempresas">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemContenciosoRelativosaprocessosdeexecução">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemContenciosoReclamadosjudicialmente">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemMoraMaisde6eaté12meses">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemMoraMaisde12eaté18meses">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemMoraMaisde18eaté24meses">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30LinhaQ0301.CréditosemMoraMaisde24meses">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Somas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Somas.Q03Coluna03">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ03Modelo30Q03Modelo30Somas.Q03Coluna04">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30.Q04Modelo30Linhas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30.Q04Modelo30Somas">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha.Q0401">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha.Q0402">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha.Q0403">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha.Q0404">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha.Q0405">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Linha.Q0405Specified">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30LinhaQ0401">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30LinhaQ0401.Mercadorias">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30LinhaQ0401.Matériasprimassubsidiáriasedeconsumo">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30LinhaQ0401.Produtosacabadoseintermédios">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30LinhaQ0401.Subprodutosdesperdíciosresíduoserefugos">
+      <remarks />
+    </member>
+    <member name="F:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30LinhaQ0401.Produtosetrabalhosemcurso">
+      <remarks />
+    </member>
+    <member name="T:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Somas">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Somas.Q04Coluna03">
+      <remarks />
+    </member>
+    <member name="P:Eticadata.ERP.AnexoModelo30TypeQ04Modelo30Q04Modelo30Somas.Q04Coluna04">
+      <remarks />
+    </member>
+    <member name="M:Eticadata.ERP.BensImoCte.IncrementString(System.String)">
+      <summary>
+ Increments a string counter
+ e.g.  "a" -&gt; "b"
+      "az" -&gt; "ba"
+       "zzz" -&gt; "aaaa"
+ </summary>
+      <param name="strString">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TiposPeriodosHorarios.GetLstTiposPeriodos">
+      <summary>
+ Devolve a lista de tipos de periodos, com as colunas Código, Descrição, Código Artigo e Código Taxa IVA, ordenado por tipo periodo.
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.TiposPeriodosHorarios.UpdateTiposPeriodos(System.Data.DataSet)">
+      <summary>
+ Actualiza a tabela de tipos de periodos
+ </summary>
+    </member>
+    <member name="M:Eticadata.ERP.Rota.AddLin(System.Int32@)">
+      <summary>
+ Adicionar uma linha à lista de rotas
+ </summary>
+      <param name="intLinha">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Rota.RemLin(System.Int32@)">
+      <summary>
+ Remover uma linha à lista de rotas
+ </summary>
+      <param name="intLinha">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Sectores.GetPostoSemSector">
+      <sumary>
+ Obter o código do 1 sector quando não esta defenido nenhum sector no posto
+</sumary>
+    </member>
+    <member name="M:Eticadata.ERP.SubZonas.GetSubzonas(System.String)">
+      <summary>
+ Função criada para Uso da Funcionalidade Alteração de Registos em MAssa
+ </summary>
+      <param name="strAbrevZona">
+      </param>
+      <returns>DataView</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.PerfilInterface.PanelItemsButtonScrollEmbebbedButtonsSizeSchema">
+      <summary>
+ PanelItemsButtonScroll
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.PerfPeriferico.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.PerfPeriferico.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.PerfPerifericos.GetConfigBalancaPosto(System.Boolean,System.Int32)">
+      <summary>
+ Devolve uma DataView com os campos da configuração da balança IPESA no posto. 
+ </summary>
+      <param name="comboBox">boolean que indica se a dataview vai ser para prencher uma combo ou não
+se o valor for true signifiva que é para uma combo.</param>
+      <param name="intCodPerfil">Filtrar por cod do perfil caso ñ seja passado nenhum valor vai devolver todos.</param>
+    </member>
+    <member name="M:Eticadata.ERP.PerfPerifericos.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.PerfPerifericos.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Posto.TpDocRegCashTitles">
+      <summary>
+ Regularization of cash titles - Gift Vouchers / Reload of Prepaid Cards
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Posto.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Posto.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills/replaces the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Posto.FillDocumentTypesWithDefaultValues">
+      <summary>
+ Fills/repalces the document types of the object
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Posto.FillDocumentTypesWithDefaultValues(System.String)">
+      <summary>
+ Fills/repalces the document types of the object
+ </summary>
+      <param name="pCodCompany">The company code</param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Postos.FindPostoByNomeMaquina(System.String)">
+      <summary>
+      </summary>
+      <param name="pNomeMaquina">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Postos.ValidaNomeMaquina(Eticadata.ERP.MaquinasPorPosto)">
+      <summary>
+ Validar o nome da máquina: cada máquina apenas pode ser associada num posto
+ </summary>
+      <param name="pMaquinaPorPosto">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Postos.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Postos.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Postos.GetPOSTheme(System.Int32)">
+      <summary>
+ Get's the PerfilInterface POSTheme based on the Workstation
+ </summary>
+      <param name="pWorkstation">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Postos.GetPOSInterfaceProfileDataForTheme(System.Int32)">
+      <summary>
+ Get's the PerfilInterface code and POSTheme based on the Workstation
+ </summary>
+      <param name="pWorkstation">
+      </param>
+      <returns>Tuple(PerfilInterfaceCode, POS_TipoPosto, POSTheme, POSBackgroundImageName, ScreenSaverTimeInMinuts)</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.CartoesSeries.GetCodProximidade(Eticadata.ERP.CartaoSerie,System.Int32)">
+      <summary>
+ Devolve o código de proximidade de uma série e de um numero de cartão
+ </summary>
+      <param name="mySerie">Série de cartões</param>
+      <param name="intCodCartao">Código do Cartão</param>
+      <returns>Código de Proximidade do cartão</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.CartoesSeries.ExisteCartaoProximidade(System.String,System.Int32)">
+      <summary>
+ Verifica se já existe algum cartão com o código de proximidade
+ </summary>
+      <param name="codCartaoProximidade">Código de proximidade</param>
+      <param name="intCodSerie">Código da série</param>
+      <returns>True - Já existe o código de proximidade</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.CartoesSeries.GetNumeroCartao(System.String)">
+      <summary>
+ Devolve o código do cartão que corresponde ao código de proximidade.
+ </summary>
+      <param name="codCartaoProximidade">Código de proximidade</param>
+      <returns>O código do cartão que corresponde ao código de proximidade</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ChequesOferta.CodFiscalYear">
+      <summary>
+ Reference to the line of the document where it was sold: CodFiscalYear, CodSection, AbbrevTpDoc, Number, LineNumber
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ChequesOferta.CodSection">
+      <summary>
+ Reference to the line of the document where it was sold: CodFiscalYear, CodSection, AbbrevTpDoc, Number, LineNumber
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ChequesOferta.AbbrevTpDoc">
+      <summary>
+ Reference to the line of the document where it was sold: CodFiscalYear, CodSection, AbbrevTpDoc, Number, LineNumber
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ChequesOferta.Number">
+      <summary>
+ Reference to the line of the document where it was sold: CodFiscalYear, CodSection, AbbrevTpDoc, Number, LineNumber
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ChequesOferta.LineNumber">
+      <summary>
+ Reference to the line of the document where it was sold: CodFiscalYear, CodSection, AbbrevTpDoc, Number, LineNumber
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ChequesOfertas.UpdateBulk(System.Collections.Generic.List{Eticadata.ERP.GiftVoucherAux})">
+      <summary>
+      </summary>
+      <param name="pGiftVouchers">The objects to delete must be FIRST!</param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ChequesOfertas.UpdateBulk(System.Collections.Generic.List{Eticadata.ERP.GiftVoucherAux},Eticadata.ERP.EtiConnNetBD)">
+      <summary>
+      </summary>
+      <param name="pGiftVouchers">The objects to delete must be FIRST!</param>
+      <param name="pEtiConnection">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ConfiguracoesSectores.Delete">
+      <summary>
+ Deletes all 'Configurações' from all sectors
+ </summary>
+      <remarks>Deletes all excepts those that have records in the Mov_POS_Mesas_Pedidos</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ConfiguracoesSectores.Delete(System.String)">
+      <summary>
+ Deletes all 'Configurações' from a specific sector
+ </summary>
+      <param name="pCodSector">Code of sector that all 'Configurações' will be deleted</param>
+      <remarks>Deletes all excepts those that have records in the Mov_POS_Mesas_Pedidos</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ConfiguracoesSectores.Delete(System.Collections.Generic.List{Eticadata.ERP.ConfiguracaoSector})">
+      <summary>
+ Deletes all 'Configurações' from all sectors attendind to the delete exception list
+ </summary>
+      <param name="pDeleteExceptions">list of exceptions to delete</param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ConfiguracoesSectores.Delete(System.String,System.Collections.Generic.List{Eticadata.ERP.ConfiguracaoSector})">
+      <summary>
+ Deletes all 'Configurações' from a specific sector attendind to the delete exception list
+ </summary>
+      <param name="pCodSector">Code of sector that all 'Configurações' will be deleted</param>
+      <param name="pDeleteExceptions">list of exceptions to delete </param>
+      <remarks>Deletes all excepts those that have records in the Mov_POS_Mesas_Pedidos</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ConfiguracoesSectores.SectorHasConfiguracoes(System.String)">
+      <summary>
+ Check's if sector has 'Configurações'
+ </summary>
+      <param name="pSector">
+      </param>
+      <returns>True if sector has racords in table, false otherwise</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ImpressoraLogica.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ImpressoraLogica.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ImpressorasLogicas.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ImpressorasLogicas.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Impressora.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Impressora.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Impressoras.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Impressoras.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ArtigosAlternativos.Inactive">
+      <summary>
+ Virtual - value on item table
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ArtigosAlternativos.MenuSuggestedLaunches">
+      <summary>
+ Virtual - value on item components Suggestion launches table
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ArtigosComponentes.MenuDisplaysOnlyAlternative">
+      <summary>
+ Virtual - value on article table
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ArtigosComponentes.Inactive">
+      <summary>
+ Virtual - value on article table
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.ArtigosComponentes.MenuSuggestedLaunches">
+      <summary>
+ Virtual - value on item components Suggestion launches table
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemDescription">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemPrice">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemTaxCode">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemTaxValue">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemTare">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemBulkType">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemBarcode">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemGrossWeight">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemType">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemIngredients">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemInteralCode">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemTaxIncludedInPrice">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemFamilyCode">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemFamilyDescription">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemTaxCodeOnScale">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.InfoToTicketScalePLU.ItemTaxOnScaleMiniDescription">
+      <summary>
+ Virtual Property - Not Saved!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.InfoToTicketScalePLU.GetPriceLineToUse">
+      <summary>
+      </summary>
+      <returns>0 When to use a promotion!</returns>
+    </member>
+    <member name="M:Eticadata.ERP.InfoToTicketScalePLU.GetPriceLineToUse(System.Boolean)">
+      <summary>
+      </summary>
+      <param name="pIgnorePromotions">Ignore promotions? Yes - Always return a price Line</param>
+      <returns>0 When to use a promotion!
+ if ignores promotions returns the price line to use!</returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutGrandeGrupo.Imagem">
+      <summary>
+ Virtual property! Not saved on DB!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutSubGrupo.Imagem">
+      <summary>
+ Virtual property! Not saved on DB!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutSubGrupo.PosicaoTexto">
+      <summary>
+ Virtual property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutSubGrupo.PosicaoImagem">
+      <summary>
+ Virtual property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutSubGrupo.PosicaoTextoArtigo">
+      <summary>
+ Virtual property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutSubGrupo.PosicaoImagemArtigo">
+      <summary>
+ Virtual property
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutArtigo.Imagem">
+      <summary>
+ Virtual property! Not saved on DB!
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutArtigo.HasFixedComments">
+      <summary>
+ Product has fixed comments
+ </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutTeclado.ColorMatrizType">
+      <summary>
+ The same as ImageNormalFilter
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.LayoutTeclado.ImageNormalFilter">
+      <summary>
+ The same as ColorMatrizType
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LayoutTeclado.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LayoutTeclado.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LayoutTeclados.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LayoutTeclados.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LocaisDeConsumo.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LocaisDeConsumo.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LocalDeConsumo.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LocalDeConsumo.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LogicalKitchenMonitor.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LogicalKitchenMonitor.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LogicalKitchenMonitors.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.LogicalKitchenMonitors.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.MonitorCozinha.FillWithDefaultValues">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.MonitorCozinha.FillWithDefaultValues(System.Boolean)">
+      <summary>
+ Fills the object with default values
+ </summary>
+      <param name="pGenerateKey">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.MonitoresCozinha.GetNextAvailableCode">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.MonitoresCozinha.GetNextAvailableCode(System.Int32)">
+      <summary>
+ Gets the next available INTEGER code from DB
+ </summary>
+      <param name="pMinimunNewCode">Treating the Code as integer, this is the minimum for the NEW value</param>
+      <returns>Next available INTEGER code</returns>
+      <remarks>The DB field is string type, but to get new automatic codes it tries to get a valid INTEGER</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ObjectosDeSala.Count(Eticadata.ERP.ObjectoDeSala.ObjectType)">
+      <summary>
+ Returns the number of elements of the specified ObjectType
+ </summary>
+      <param name="pObjectType">
+      </param>
+      <returns>Number of elements of the specified ObjectType</returns>
+      <remarks>If ObjecType=None, counts ALL elements in the table</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ObjectosDeSala.FindType(System.String)">
+      <summary>
+ Returns the object type As ObjectoDeSala.ObjectType
+ </summary>
+      <param name="pCodObject">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ObjectosDeSala.GetFirst(Eticadata.ERP.ObjectoDeSala.ObjectType)">
+      <summary>
+ Returns the code of the first object of the specified ObjectType
+ </summary>
+      <param name="pObjectType">
+      </param>
+      <returns>
+      </returns>
+      <remarks>If ObjecType=None, returns the  FIRST element regardless of if's ObjectType</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.SectoresDecorativos.Delete">
+      <summary>
+ Deletes all 'Decorativos' from all sectors
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.SectoresDecorativos.Delete(System.String)">
+      <summary>
+ Deletes all 'Decorativos' from a specific sector
+ </summary>
+      <param name="pCodSector">Code of sector that all 'Decorativos' will be deleted</param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.SectoresDecorativos.Delete(System.Collections.Generic.List{Eticadata.ERP.SectorDecorativo})">
+      <summary>
+ Deletes all 'Decorativos' from all sectors attendind to the delete exception list
+ </summary>
+      <param name="pDeleteExceptions">list of exceptions to delete</param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.SectoresDecorativos.Delete(System.String,System.Collections.Generic.List{Eticadata.ERP.SectorDecorativo})">
+      <summary>
+ Deletes all 'Decorativos' from a specific sector attendind to the delete exception list
+ </summary>
+      <param name="pCodSector">Code of sector that all 'Decorativos' will be deleted</param>
+      <param name="pDeleteExceptions">list of exceptions to delete </param>
+      <remarks>Deletes all excepts those that have records in the Mov_POS_Mesas_Pedidos</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.SectoresDecorativos.SectorHasDecorativos(System.String)">
+      <summary>
+ Check's if sector has 'Decorativos'
+ </summary>
+      <param name="pSector">
+      </param>
+      <returns>True if sector has racords in table, false otherwise</returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.ValesDesconto.ValidaDatas(System.DateTime,System.DateTime,System.DateTime,System.Int32@)">
+      <summary>
+ Verifica se o vale esta dentro de datas válidas
+ </summary>
+      <param name="datainicial">Data Inicial (Now)</param>
+      <param name="datafinal">Dita final</param>
+      <param name="DataInicioVale">Data de inicio do uso do vale após emição</param>
+      <param name="intTpErro">Tipo de erro 1-Fora da data de incio de validade, 2-Data validade ultrapassada</param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TesConta.AbrevTpDocCte">
+      <summary>
+ Abreviatura do Tipo de Documento a lançar na ligação à Contabilidade
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TesConta.Descricao">
+      <summary>
+ Descrição da conta
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TesConta.Bic">
+      <summary>
+ BIC da Conta
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TesConta.Iban">
+      <summary>
+ IBAN da Conta
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.TesConta.MeanOfPaymentCode">
+      <summary>
+ Tipo Mov./Pag. da Conta
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TesContas.TipoNumerador(System.String,System.Int32)">
+      <summary>
+ Return the type of numbering used in Reconciliations (TpReconciliacoes) or in Cash Sheets (TpFolhasCaixa), for the selected account, whether it is automatic or manual.
+ </summary>
+      <param name="strCodConta">
+      </param>
+      <param name="TpNumerador">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Eticadata.ERP.TesContas.FindInfConta(System.String,System.String@,System.String@)">
+      <summary>
+ Obtain information for a given account, namely the account number and associated currency and currency
+ </summary>
+      <param name="pCodConta">
+      </param>
+      <param name="pNumeroConta">
+      </param>
+      <param name="pAbrevMoeda">
+      </param>
+    </member>
+    <member name="P:Eticadata.ERP.TesPeriodico.CambioUI">
+      <summary>
+ Câmbio da Moeda (adaptado ao sistema de câmbio invertido)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TesTipoMovPags.GetLstTiposMovPagsPOS">
+      <summary>
+ Gets ALL means of payment
+ </summary>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TesTipoMovPags.GetLstTiposMovPagsPOS(Eticadata.ERP.TesTipoMovPags.TiposMovPagsFor,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+ Gets the means of payment filtered by the conditions
+ </summary>
+      <param name="pFor">
+      </param>
+      <param name="pHasDeposit">
+      </param>
+      <param name="pAllowsCredit">
+      </param>
+      <param name="pAllowsNonCredit">
+      </param>
+      <param name="pHasAdvances">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TesTipoMovPags.GetLstTiposMovPagsPOS(Eticadata.ERP.TesTipoMovPags.TiposMovPagsFor,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+ Gets the means of payment filtered by the conditions
+ </summary>
+      <param name="pFor">Tipo de janela a usar os meios de pagamento: [0] se para os pagamentos; [1] recebimentos; [2] Carregamento de Cartões; [3] Devoluções; [4] Encomendas  </param>
+      <param name="pAllowsCredit"> Permite pagamento a crédito </param>
+      <param name="pAllowsNonCredit"> Não permite pagamento a crédito </param>
+      <param name="pHasDeposit"> Existe sinal de encomenda </param>
+      <param name="pHasAdvances"> Existe adiantamentos </param>
+      <param name="pUsesGratificationDoc"> Tem o cálculo de propina voluntária ativo </param>
+      <param name="pDocWithHolds"> Documento com retenções </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TesTipoMovPags.GetLstTiposMovPagsPOS(Eticadata.ERP.TesTipoMovPags.TiposMovPagsFor,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+ Gets the means of payment filtered by the conditions
+ </summary>
+      <param name="pFor">Tipo de janela a usar os meios de pagamento: [0] se para os pagamentos; [1] recebimentos; [2] Carregamento de Cartões; [3] Devoluções; [4] Encomendas  </param>
+      <param name="pAllowsCredit"> Permite pagamento a crédito </param>
+      <param name="pAllowsNonCredit"> Não permite pagamento a crédito </param>
+      <param name="pHasDeposit"> Existe sinal de encomenda </param>
+      <param name="pHasAdvances"> Existe adiantamentos </param>
+      <param name="pAllowsPrepaidCard"> Permite cartões pré-pagos </param>
+      <param name="pAllowsGiftCheck"> Permite cheques oferta </param>
+      <param name="pAllowsRefundCoupon"> Permite vales de reembolso </param>
+      <param name="pUsesGratificationDoc"> Tem o cálculo de propina voluntária ativo </param>
+      <param name="pDocWithHolds"> Documento com retenções </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoFamilias.ExisteNivel(System.String,System.Int32)">
+      <summary>
+ Testa se existe um nivel na BD igual ao nivel parâmetro a inserir de novo
+ </summary>
+      <param name="pCodigo">
+      </param>
+      <param name="pKNivel">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.TipoFamilias.ExisteNivelDefCondVenda(System.String@)">
+      <summary>
+ Testa se existe um único nível na definição de condição de vendas
+ </summary>
+      <param name="strCodFam">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.FiscalYearCodeUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.SectionCodeUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.DocTypeCodeUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.NumberUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.LineVoucherUseDoc">
+      <summary>
+ Document that used the voucher- Part of the key of the voucher line (Used in Consumer vouchers)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.LinePaymentUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key of the payment line (Used in Consumer vouchers)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPayments.LinePaymentVoucherUseDoc">
+      <summary>
+ Document that used the voucher- Part of the key of the payment line voucher - where is referencered in the payment line voucher (Used in Consumer Vouchers)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VoucherPaymentsKeyUseDoc.#ctor(System.String,System.Int64,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ When used as Payment
+ </summary>
+      <param name="pMeanOfPaymentCode">
+      </param>
+      <param name="pNumber">
+      </param>
+      <param name="pFiscalYearCodeUseDoc">
+      </param>
+      <param name="pSectionCodeUseDoc">
+      </param>
+      <param name="pDocTypeCodeUseDoc">
+      </param>
+      <param name="pNumberUseDoc">
+      </param>
+      <param name="pLinePaymentUseDoc">
+      </param>
+      <param name="pLinePaymentVoucherUseDoc">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VoucherPaymentsKeyUseDoc.#ctor(System.String,System.Int64,System.String,System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+ When used in CabVoucher
+ </summary>
+      <param name="pMeanOfPaymentCode">
+      </param>
+      <param name="pNumber">
+      </param>
+      <param name="pFiscalYearCodeUseDoc">
+      </param>
+      <param name="pSectionCodeUseDoc">
+      </param>
+      <param name="pDocTypeCodeUseDoc">
+      </param>
+      <param name="pNumberUseDoc">
+      </param>
+      <param name="pLineVoucherUseDoc">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPaymentsKeyUseDoc.LinePaymentUseDoc">
+      <summary>
+ When voucher used as payment
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPaymentsKeyUseDoc.LinePaymentVoucherUseDoc">
+      <summary>
+ When voucher used as payment
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherPaymentsKeyUseDoc.LineVoucherUseDoc">
+      <summary>
+ When used in CabVoucher 
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VouchersPayments.GetNew(System.String)">
+      <summary>
+      </summary>
+      <param name="pMeanOfPaymentCode">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VouchersPayments.GetNew(System.String,System.Double)">
+      <summary>
+      </summary>
+      <param name="pMeanOfPaymentCode">
+      </param>
+      <param name="pValue">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Voucher.UpdateStateChangedData">
+      <summary>
+ Updates the state changed information (Section, Date and Login)
+ </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Voucher.UpdateStateChangedData(System.DateTime)">
+      <summary>
+ Updates the state changed information (Section, Date and Login)
+ </summary>
+      <param name="pDate">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.CodFiscalYearCreateDoc">
+      <summary>
+ Document that created the Voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.CodSectionCreateDoc">
+      <summary>
+ Document that created the Voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.AbbrevTpDocCreateDoc">
+      <summary>
+ Document that created the Voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.NumberCreateDoc">
+      <summary>
+ Document that created the Voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.LinePaymentCreateDoc">
+      <summary>
+ Document that created the Voucher - Part of the key of the payment line
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.LinePaymentVoucherCreateDoc">
+      <summary>
+ Document that created the Voucher - Part of the key of the payment line voucher - where is referencered in the payment line voucher
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.CodFiscalYearUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.CodSectionUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.AbbrevTpDocUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.NumberUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.LineVoucherUseDoc">
+      <summary>
+ Document that used the voucher- Part of the key of the voucher line (Used in Discount vouchers)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.LinePaymentUseDoc">
+      <summary>
+ Document that used the voucher - Part of the key of the payment line (Used in Refund vouchers)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.LinePaymentVoucherUseDoc">
+      <summary>
+ Document that used the voucher- Part of the key of the payment line voucher - where is referencered in the payment line voucher (Used in Refund Vouchers)
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.ProductsCatalog">
+      <summary>
+ EXTENSION - Get's the record of the Product's catalog used on the Voucher
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Voucher.DiscountVoucherType">
+      <summary>
+ EXTENSION to Discount Vouchers - Get's the record of the Discount voucher type used on the Voucher
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VoucherKeyWithState.#ctor(System.String,Eticadata.ERP.EtiEnums.VoucherKinds,System.Int64,Eticadata.ERP.EtiEnums.VoucherStates,System.String)">
+      <summary>
+ Used when Cancel ou Anulled the voucher
+ </summary>
+      <param name="pCodSection">
+      </param>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pNumber">
+      </param>
+      <param name="pState">
+      </param>
+      <param name="pStateReason">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VoucherKeyWithState.#ctor(System.String,Eticadata.ERP.EtiEnums.VoucherKinds,System.Int64,Eticadata.ERP.EtiEnums.VoucherStates,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ When used as Payment
+ </summary>
+      <param name="pCodSection">
+      </param>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pNumber">
+      </param>
+      <param name="pState">
+      </param>
+      <param name="pCodFiscalYearUseDoc">
+      </param>
+      <param name="pCodSectionUseDoc">
+      </param>
+      <param name="pAbbrevTpDocUseDoc">
+      </param>
+      <param name="pNumberUseDoc">
+      </param>
+      <param name="pLinePaymentUseDoc">
+      </param>
+      <param name="pLinePaymentVoucherUseDoc">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.VoucherKeyWithState.#ctor(System.String,Eticadata.ERP.EtiEnums.VoucherKinds,System.Int64,Eticadata.ERP.EtiEnums.VoucherStates,System.String,System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+ When used in CabVoucher
+ </summary>
+      <param name="pCodSection">
+      </param>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pNumber">
+      </param>
+      <param name="pState">
+      </param>
+      <param name="pCodFiscalYearUseDoc">
+      </param>
+      <param name="pCodSectionUseDoc">
+      </param>
+      <param name="pAbbrevTpDocUseDoc">
+      </param>
+      <param name="pNumberUseDoc">
+      </param>
+      <param name="pLineVoucherUseDoc">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherKeyWithState.LinePaymentUseDoc">
+      <summary>
+ When voucher used as payment
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherKeyWithState.LinePaymentVoucherUseDoc">
+      <summary>
+ When voucher used as payment
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.VoucherKeyWithState.LineVoucherUseDoc">
+      <summary>
+ When used in CabVoucher 
+ </summary>
+      <value>
+      </value>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.GetNew(Eticadata.ERP.EtiEnums.VoucherKinds)">
+      <summary>
+      </summary>
+      <param name="pVoucherKind">
+      </param>
+      <returns>
+      </returns>
+      <remarks>Will not set the number and external number!</remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.GetNew(Eticadata.ERP.EtiEnums.VoucherKinds,System.String)">
+      <summary>
+      </summary>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pCodSection">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.GetNew(Eticadata.ERP.EtiEnums.VoucherKinds,System.String,Eticadata.ERP.EtiEnums.VoucherValueTypes,System.Double)">
+      <summary>
+      </summary>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pCodSection">
+      </param>
+      <param name="pValueType">
+      </param>
+      <param name="pValue">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.GetNew(Eticadata.ERP.EtiEnums.VoucherKinds,System.String,Eticadata.ERP.EtiEnums.VoucherValueTypes,System.Double,System.DateTime,System.Nullable{System.DateTime},System.String,System.String,System.String,System.Int32)">
+      <summary>
+      </summary>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pCodSection">
+      </param>
+      <param name="pValueType">
+      </param>
+      <param name="pValue">
+      </param>
+      <param name="pDateValidityStart">
+      </param>
+      <param name="pDateValidityEnd">
+      </param>
+      <param name="pCodFiscalYearCreateDoc">
+      </param>
+      <param name="pCodSectionCreateDoc">
+      </param>
+      <param name="pAbbrevTpDocCreateDoc">
+      </param>
+      <param name="pNumberCreateDoc">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.GetNew(Eticadata.ERP.EtiEnums.VoucherKinds,System.String,Eticadata.ERP.EtiEnums.VoucherValueTypes,System.Double,System.DateTime,System.Nullable{System.DateTime},System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+      <summary>
+      </summary>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pCodSection">
+      </param>
+      <param name="pValueType">
+      </param>
+      <param name="pValue">
+      </param>
+      <param name="pDateValidityStart">
+      </param>
+      <param name="pDateValidityEnd">
+      </param>
+      <param name="pCodFiscalYearCreateDoc">
+      </param>
+      <param name="pCodSectionCreateDoc">
+      </param>
+      <param name="pAbbrevTpDocCreateDoc">
+      </param>
+      <param name="pNumberCreateDoc">
+      </param>
+      <param name="pLinePaymentCreateDoc">
+      </param>
+      <param name="pLinePaymentVoucherCreateDoc">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.SetNumber(Eticadata.ERP.Voucher,Eticadata.ERP.EtiConnNetBD)">
+      <summary>
+ Fills the voucher with the number and external number
+ </summary>
+      <param name="pVoucher">
+      </param>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="M:Eticadata.ERP.Vouchers.ChangeVouchersState(Eticadata.ERP.EtiEnums.VoucherKinds,System.String,Eticadata.ERP.EtiEnums.VoucherStates,System.String)">
+      <summary>
+      </summary>
+      <param name="pVoucherKind">
+      </param>
+      <param name="pExternalNumbers">Can be one or more of the same kind separated by commas (,) !REMARK: MUST CAME WITHOUT SINGLE QUOTES! SAMPLE: 0011114,0011115</param>
+      <param name="pNewVoucherState">
+      </param>
+      <returns>
+      </returns>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="P:Eticadata.ERP.Tabelas.AnexosDigitais">
+----------------------------- ANEXOS DIGITAIS----------------------------------
+</member>
+  </members>
+</doc>

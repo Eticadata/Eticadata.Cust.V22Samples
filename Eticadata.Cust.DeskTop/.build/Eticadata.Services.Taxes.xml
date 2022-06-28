@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eticadata.Services.Taxes</name>
+    </assembly>
+    <members>
+        <member name="T:Eticadata.Services.Taxes.FiscalTaxesController">
+            <summary>
+            Web service to expose FiscalTaxes related methods.
+            </summary>
+        </member>
+        <member name="M:Eticadata.Services.Taxes.FiscalTaxesController.GetEntityCollection">
+            <summary>
+            Creates the entity collection specific to this controller.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Eticadata.Services.Taxes.TaxGroupsController">
+            <summary>
+            Web service to expose Tax Groups related methods.
+            </summary>
+        </member>
+        <member name="M:Eticadata.Services.Taxes.TaxGroupsController.GetEntityCollection">
+            <summary>
+            Creates the entity collection specific to this controller.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Eticadata.Services.Taxes.TaxRegionsController">
+            <summary>
+            Web service to expose Tax Regions related methods.
+            </summary>
+        </member>
+        <member name="M:Eticadata.Services.Taxes.TaxRegionsController.GetEntityCollection">
+            <summary>
+            Creates the entity collection specific to this controller.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Eticadata.Services.Taxes.TaxesController">
+            <summary>
+            Web service to expose Taxes related methods.
+            </summary>
+        </member>
+        <member name="M:Eticadata.Services.Taxes.TaxesController.GetEntityCollection">
+            <summary>
+            Creates the entity collection specific to this controller.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
